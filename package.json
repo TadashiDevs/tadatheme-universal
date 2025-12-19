@@ -3,7 +3,7 @@
   "displayName": "TadaTheme Universal",
   "description": "¡Tada! Tu editor, tus reglas, en un solo clic. 34 temas profesionales.",
   "version": "1.0.0",
-  "publisher": "tadadev",
+  "publisher": "TadashiDev",
   "engines": {
     "vscode": "^1.85.0"
   },

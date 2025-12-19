@@ -22,7 +22,7 @@
 </p>
 
 <p align="center">
-  You can find my extensions on the <a href="https://marketplace.visualstudio.com/publishers/tadadev">VS Code Marketplace</a> or the <a href="https://open-vsx.org/namespace/tadadev">Open VSX</a>
+  You can find my extensions on the <a href="https://marketplace.visualstudio.com/publishers/TadashiDev">VS Code Marketplace</a> or the <a href="https://open-vsx.org/namespace/TadashiDev">Open VSX</a>
 </p>
 
 
