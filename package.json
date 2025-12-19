@@ -1,0 +1,65 @@
+{
+  "name": "tadatheme-universal",
+  "displayName": "TadaTheme Universal",
+  "description": "¡Tada! Tu editor, tus reglas, en un solo clic. 34 temas profesionales.",
+  "version": "1.0.0",
+  "publisher": "tadadev",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes",
+    "Other"
+  ],
+  "keywords": [
+    "theme",
+    "themes",
+    "color theme",
+    "customization",
+    "dark theme",
+    "light theme",
+    "workbench",
+    "syntax highlighting",
+    "dracula",
+    "monokai",
+    "nord",
+    "synthwave",
+    "catppuccin",
+    "solarized",
+    "github dark",
+    "one dark",
+    "tada",
+    "tadadev"
+  ],
+  "icon": "resources/tadathemeuniversal-store.png",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "tadatheme.selectTheme",
+        "title": "TadaTheme: Seleccionar Tema"
+      },
+      {
+        "command": "tadatheme.resetTheme",
+        "title": "TadaTheme: Restaurar Original"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0",
+    "@vscode/vsce": "^2.22.0"
+  }
+}
