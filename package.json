@@ -30,7 +30,7 @@
     "tada",
     "tadadev"
   ],
-  "icon": "https://github.com/TadashiDevs/tadatheme-universal/blob/main/resources/tadathemeuniversal-store.png",
+  "icon": "resources/tadathemeuniversal-store.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/TadashiDevs/tadatheme-universal"
