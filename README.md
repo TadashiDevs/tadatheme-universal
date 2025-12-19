@@ -186,12 +186,3 @@ If you have any theme requests or issues, please [open an issue](https://github.
 
 [MIT](https://github.com/TadashiDevs/tadatheme-universal/blob/main/LICENSE) © [TadashiDevs](https://github.com/TadashiDevs)
 
-
-## 📝 Changelog
-
-### v1.0.0 (2025)
-- 🎉 Initial release
-- 🎨 34 professional themes
-- ⚡ Quick Pick for fast selection
-- 🎯 UI & syntax colors
-- ↺ Restore theme function
