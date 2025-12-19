@@ -21,6 +21,10 @@
   <em>34 professional themes ready to use in VS Code</em>
 </p>
 
+<p align="center">
+  You can find my extensions on the <a href="https://marketplace.visualstudio.com/publishers/tadadev">VS Code Marketplace</a> or the <a href="https://open-vsx.org/namespace/tadadev">Open VSX</a>
+</p>
+
 
 ## ✨ Features
 

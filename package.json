@@ -8,8 +8,7 @@
     "vscode": "^1.85.0"
   },
   "categories": [
-    "Themes",
-    "Other"
+    "Themes"
   ],
   "keywords": [
     "theme",
@@ -31,7 +30,7 @@
     "tada",
     "tadadev"
   ],
-  "icon": "resources/tadathemeuniversal-store.png",
+  "icon": "https://github.com/TadashiDevs/tadatheme-universal/blob/main/resources/tadathemeuniversal-store.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/TadashiDevs/tadatheme-universal"
