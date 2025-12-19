@@ -1,9 +1,25 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/TadashiDevs/tadatheme-universal/main/resources/tadathemeuniversal-store.png" alt="TadaTheme Universal Logo" width="150" />
+</p>
 
-# 🎨 TadaTheme Universal
+<h1 align="center">TadaTheme Universal</h1>
 
-**The ultimate theme collection for modern developers.**
+<p align="center">
+  <a href="https://github.com/TadashiDevs/tadatheme-universal/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/TadashiDevs/tadatheme-universal?style=flat-square&labelColor=1a1a2e&color=4ade80" alt="License" />
+  </a>
+  <a href="https://github.com/TadashiDevs/tadatheme-universal/stargazers">
+    <img src="https://img.shields.io/github/stars/TadashiDevs/tadatheme-universal?style=flat-square&labelColor=1a1a2e&color=38bdf8" alt="Stars" />
+  </a>
+</p>
 
-*34 professional themes ready to use in VS Code*
+<p align="center">
+  <strong>The ultimate theme collection for modern developers</strong>
+</p>
+
+<p align="center">
+  <em>34 professional themes ready to use in VS Code</em>
+</p>
 
 
 ## ✨ Features
@@ -132,15 +148,15 @@ TadaTheme Universal is designed with security as a priority:
 
 | TadaTheme Light | Synthwave |
 |:---------------:|:---------:|
-| ![TadaTheme Light](screenshots/tadatheme-light.png) | ![Synthwave](screenshots/synthwave-dark.png) |
+| ![TadaTheme Light](https://github.com/TadashiDevs/tadatheme-universal/blob/main/screenshots/tadatheme-light.png) | ![Synthwave](https://github.com/TadashiDevs/tadatheme-universal/blob/main/screenshots/synthwave-dark.png) |
 
 | Dracula | Rose Dark |
 |:-------:|:---------:|
-| ![Dracula](screenshots/dracula-dark.png) | ![Rose Dark](screenshots/rose-dark.png) |
+| ![Dracula](https://github.com/TadashiDevs/tadatheme-universal/blob/main/screenshots/dracula-dark.png) | ![Rose Dark](https://github.com/TadashiDevs/tadatheme-universal/blob/main/screenshots/rose-dark.png) |
 
 | Cosmic Dark | Solarized Dark |
 |:-----------:|:--------------:|
-| ![Cosmic Dark](screenshots/cosmic-dark.png) | ![Solarized Dark](screenshots/solarized-dark.png) |
+| ![Cosmic Dark](https://github.com/TadashiDevs/tadatheme-universal/blob/main/screenshots/cosmic-dark.png) | ![Solarized Dark](https://github.com/TadashiDevs/tadatheme-universal/blob/main/screenshots/solarized-dark.png) |
 
 
 
@@ -163,12 +179,12 @@ If you find this extension useful, please consider:
 
 💬 **Write a review** - Your feedback helps us improve
 
-If you have any theme requests or issues, please [open an issue](https://github.com/TadashiDevs).
+If you have any theme requests or issues, please [open an issue](https://github.com/TadashiDevs/tadatheme-universal/issues/new).
 
 
 ## 📄 License
 
-MIT © [TadashiDevs](https://github.com/TadashiDevs)
+[MIT](https://github.com/TadashiDevs/tadatheme-universal/blob/main/LICENSE) © [TadashiDevs](https://github.com/TadashiDevs)
 
 
 ## 📝 Changelog
