@@ -166,19 +166,19 @@ TadaTheme Universal is designed with security as a priority:
 
 | TadaTheme Light | Synthwave |
 |:---------------:|:---------:|
-| ![TadaTheme Light](http://raw.githubusercontent.com/TadashiDevs/tadatheme-universal/main/screenshots/tadatheme-light.png) | ![Synthwave](http://raw.githubusercontent.com/TadashiDevs/tadatheme-universal/main/screenshots/synthwave-dark.png) |
+| ![TadaTheme Light](https://raw.githubusercontent.com/TadashiDevs/tadatheme-universal/main/screenshots/tadatheme-light.png) | ![Synthwave](https://raw.githubusercontent.com/TadashiDevs/tadatheme-universal/main/screenshots/synthwave-dark.png) |
 
 | Dracula | Rose Light |
 |:-------:|:---------:|
-| ![Dracula](http://raw.githubusercontent.com/TadashiDevs/tadatheme-universal/main/screenshots/dracula-dark.png) | ![Rose Light](http://raw.githubusercontent.com/TadashiDevs/tadatheme-universal/main/screenshots/rose-light.png) |
+| ![Dracula](https://raw.githubusercontent.com/TadashiDevs/tadatheme-universal/main/screenshots/dracula-dark.png) | ![Rose Light](https://raw.githubusercontent.com/TadashiDevs/tadatheme-universal/main/screenshots/rose-light.png) |
 
 | Cosmic Dark | Solarized Dark |
 |:-----------:|:--------------:|
-| ![Cosmic Dark](http://raw.githubusercontent.com/TadashiDevs/tadatheme-universal/main/screenshots/cosmic-dark.png) | ![Solarized Dark](http://raw.githubusercontent.com/TadashiDevs/tadatheme-universal/main/screenshots/solarized-dark.png) |
+| ![Cosmic Dark](https://raw.githubusercontent.com/TadashiDevs/tadatheme-universal/main/screenshots/cosmic-dark.png) | ![Solarized Dark](https://raw.githubusercontent.com/TadashiDevs/tadatheme-universal/main/screenshots/solarized-dark.png) |
 
 | Mint Fresh Light | Crimson Dark |
 |:-----------:|:--------------:|
-| ![Mint Fresh Light](http://raw.githubusercontent.com/TadashiDevs/tadatheme-universal/main/screenshots/mintfresh-light.png) | ![Crimson Dark](http://raw.githubusercontent.com/TadashiDevs/tadatheme-universal/main/screenshots/crimson-dark.png) |
+| ![Mint Fresh Light](https://raw.githubusercontent.com/TadashiDevs/tadatheme-universal/main/screenshots/mintfresh-light.png) | ![Crimson Dark](https://raw.githubusercontent.com/TadashiDevs/tadatheme-universal/main/screenshots/crimson-dark.png) |
 
 ## 🔮 Coming Soon
 
