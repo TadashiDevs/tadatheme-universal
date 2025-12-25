@@ -18,7 +18,7 @@
 </p>
 
 <p align="center">
-  <em>34 professional themes ready to use in VS Code</em>
+  <em>38 professional themes ready to use in your Code editor</em>
 </p>
 
 <p align="center">
@@ -26,9 +26,19 @@
 </p>
 
 
+## 🆕 What's New in v1.1.0
+
+- ✨ **4 new light themes**: Mint Fresh, Sand Dune, Terracotta, Notion
+- 🎨 **Enhanced light theme readability** - Darker text colors for better contrast
+- 🔧 **Fixed JSX/TSX text visibility** - Text inside JSX elements now properly visible
+- 💬 **AI Chat improvements** - Tables and tooltips now readable in all themes
+- 🎯 **Activity Bar accent colors** - Icons now use theme colors consistently
+- 📋 **Context menu borders** - Selection borders match theme accent
+- 🖥️ **Status bar theming** - All status bar elements now themed
+
 ## ✨ Features
 
-- 🎨 **34 professional themes** - Ready to use, no configuration needed
+- 🎨 **38 professional themes** - Ready to use, no configuration needed
 - 🚀 **One-click apply** - Select and apply instantly
 - 🎯 **UI & syntax colors** - Customize your entire editor
 - ↺ **Easy restore** - Return to original theme anytime
@@ -37,7 +47,7 @@
 - 🔒 **Full privacy** - Your data never leaves your machine
 
 
-## 🎭 Available Themes (34 themes)
+## 🎭 Available Themes (38 themes)
 
 ### 🌟 TadaTheme Signature
 | Theme | Type | Description |
@@ -73,6 +83,10 @@
 | Lavender | Light | Soft lavender |
 | Ocean | Dark | Deep ocean |
 | Glacier | Light | Ice blue |
+| Mint Fresh | Light | Fresh mint green |
+| Sand Dune | Light | Desert sand beige |
+| Terracotta | Light | Italian terracotta |
+| Notion | Light | Minimalist Notion style |
 
 ### 🌿 Nature & Elements
 | Theme | Type | Description |
@@ -152,17 +166,19 @@ TadaTheme Universal is designed with security as a priority:
 
 | TadaTheme Light | Synthwave |
 |:---------------:|:---------:|
-| ![TadaTheme Light](https://github.com/TadashiDevs/tadatheme-universal/blob/main/screenshots/tadatheme-light.png) | ![Synthwave](https://github.com/TadashiDevs/tadatheme-universal/blob/main/screenshots/synthwave-dark.png) |
+| ![TadaTheme Light](http://raw.githubusercontent.com/TadashiDevs/tadatheme-universal/main/screenshots/tadatheme-light.png) | ![Synthwave](http://raw.githubusercontent.com/TadashiDevs/tadatheme-universal/main/screenshots/synthwave-dark.png) |
 
-| Dracula | Rose Dark |
+| Dracula | Rose Light |
 |:-------:|:---------:|
-| ![Dracula](https://github.com/TadashiDevs/tadatheme-universal/blob/main/screenshots/dracula-dark.png) | ![Rose Dark](https://github.com/TadashiDevs/tadatheme-universal/blob/main/screenshots/rose-dark.png) |
+| ![Dracula](http://raw.githubusercontent.com/TadashiDevs/tadatheme-universal/main/screenshots/dracula-dark.png) | ![Rose Light](http://raw.githubusercontent.com/TadashiDevs/tadatheme-universal/main/screenshots/rose-light.png) |
 
 | Cosmic Dark | Solarized Dark |
 |:-----------:|:--------------:|
-| ![Cosmic Dark](https://github.com/TadashiDevs/tadatheme-universal/blob/main/screenshots/cosmic-dark.png) | ![Solarized Dark](https://github.com/TadashiDevs/tadatheme-universal/blob/main/screenshots/solarized-dark.png) |
+| ![Cosmic Dark](http://raw.githubusercontent.com/TadashiDevs/tadatheme-universal/main/screenshots/cosmic-dark.png) | ![Solarized Dark](http://raw.githubusercontent.com/TadashiDevs/tadatheme-universal/main/screenshots/solarized-dark.png) |
 
-
+| Mint Fresh Light | Crimson Dark |
+|:-----------:|:--------------:|
+| ![Mint Fresh Light](http://raw.githubusercontent.com/TadashiDevs/tadatheme-universal/main/screenshots/mintfresh-light.png) | ![Crimson Dark](http://raw.githubusercontent.com/TadashiDevs/tadatheme-universal/main/screenshots/crimson-dark.png) |
 
 ## 🔮 Coming Soon
 

@@ -1,8 +1,8 @@
 {
   "name": "tadatheme-universal",
   "displayName": "TadaTheme Universal",
-  "description": "¡Tada! Tu editor, tus reglas, en un solo clic. 34 temas profesionales.",
-  "version": "1.0.0",
+  "description": "38 professional themes ready to use in your Code editor",
+  "version": "1.1.0",
   "publisher": "TadashiDev",
   "engines": {
     "vscode": "^1.85.0"
@@ -27,7 +27,6 @@
     "solarized",
     "github dark",
     "one dark",
-    "tada",
     "tadadev"
   ],
   "icon": "resources/tadathemeuniversal-store.png",

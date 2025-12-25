@@ -149,6 +149,34 @@ export const presetThemes: PresetTheme[] = [
         // Glaciar - azul hielo brillante
         seedColors: ['#f0f9ff', '#e0f2fe', '#bae6fd', '#0ea5e9', '#38bdf8']
     },
+    {
+        id: 'mint-fresh',
+        label: 'Mint Fresh',
+        type: 'light',
+        // Menta fresca - verde menta limpio
+        seedColors: ['#f0fdf4', '#dcfce7', '#bbf7d0', '#10b981', '#34d399']
+    },
+    {
+        id: 'sand-dune',
+        label: 'Sand Dune',
+        type: 'light',
+        // Arena del desierto - beige cálido
+        seedColors: ['#fefcf3', '#fef3c7', '#fde68a', '#d97706', '#f59e0b']
+    },
+    {
+        id: 'terracotta',
+        label: 'Terracotta',
+        type: 'light',
+        // Terracota italiana - naranja arcilla
+        seedColors: ['#fef7f0', '#fed7c3', '#fdba9a', '#ea580c', '#f97316']
+    },
+    {
+        id: 'notion',
+        label: 'Notion',
+        type: 'light',
+        // Estilo Notion - minimalista con coral
+        seedColors: ['#ffffff', '#f7f6f3', '#ebeae6', '#eb5757', '#2f80ed']
+    },
 
     // ═══════════════════════════════════════════════════════════
     // NATURE & ELEMENTS

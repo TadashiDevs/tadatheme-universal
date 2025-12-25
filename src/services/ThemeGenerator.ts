@@ -10,19 +10,26 @@ export function generateWorkbenchColors(
     const [background, panel, surface, accent, highlight] = seedColors;
 
     const textPrimary = type === 'dark' ? '#e0e0e0' : '#1a1a1a';
-    const textSecondary = type === 'dark' ? '#a0a0a0' : '#666666';
-    const textMuted = type === 'dark' ? '#707070' : '#999999';
+    const textSecondary = type === 'dark' ? '#a0a0a0' : '#333333';
+    const textMuted = type === 'dark' ? '#707070' : '#444444';
     const border = type === 'dark'
         ? adjustBrightness(panel, 15)
-        : adjustBrightness(panel, -10);
+        : adjustBrightness(panel, -25);
 
     return {
-        // Activity Bar
-        'activityBar.background': background,
-        'activityBar.foreground': textPrimary,
-        'activityBar.inactiveForeground': textMuted,
+        // Activity Bar - Con colores de tema NOTORIOS (siempre visibles)
+        'activityBar.background': panel,
+        'activityBar.foreground': accent,
+        'activityBar.inactiveForeground': accent + '70',
+        'activityBar.activeBorder': accent,
+        'activityBar.activeBackground': surface + '40',
+        'activityBar.dropBorder': highlight,
         'activityBarBadge.background': accent,
         'activityBarBadge.foreground': '#ffffff',
+        'activityBarTop.foreground': accent,
+        'activityBarTop.inactiveForeground': accent + '70',
+        'activityBarTop.activeBorder': accent,
+        'activityBarTop.dropBorder': highlight,
 
         // Side Bar
         'sideBar.background': panel,
@@ -36,9 +43,27 @@ export function generateWorkbenchColors(
         'editor.foreground': textPrimary,
         'editorLineNumber.foreground': textMuted,
         'editorLineNumber.activeForeground': textPrimary,
-        'editor.selectionBackground': highlight + '40',
-        'editor.lineHighlightBackground': surface + '30',
+        'editor.selectionBackground': type === 'dark' ? highlight + '40' : highlight + '25',
+        'editor.inactiveSelectionBackground': type === 'dark' ? highlight + '25' : highlight + '15',
+        'editor.selectionHighlightBackground': type === 'dark' ? highlight + '30' : highlight + '18',
+        'editor.lineHighlightBackground': type === 'dark' ? surface + '30' : surface + '40',
         'editorCursor.foreground': accent,
+
+        // Word Highlight (cuando haces clic en una palabra)
+        'editor.wordHighlightBackground': type === 'dark' ? highlight + '35' : highlight + '20',
+        'editor.wordHighlightStrongBackground': type === 'dark' ? accent + '35' : accent + '20',
+        'editor.wordHighlightTextBackground': type === 'dark' ? highlight + '25' : highlight + '15',
+        'editor.wordHighlightBorder': type === 'dark' ? highlight + '60' : accent + '40',
+        'editor.wordHighlightStrongBorder': type === 'dark' ? accent + '60' : accent + '50',
+
+        // Find Match Highlight
+        'editor.findMatchBackground': type === 'dark' ? '#facc1560' : '#facc1540',
+        'editor.findMatchHighlightBackground': type === 'dark' ? '#facc1535' : '#facc1525',
+        'editor.findMatchBorder': type === 'dark' ? '#facc15' : '#b8860b',
+        'editor.findMatchHighlightBorder': 'transparent',
+
+        // Range Highlight (cuando seleccionas un rango)
+        'editor.rangeHighlightBackground': type === 'dark' ? surface + '40' : surface + '50',
 
         // Title Bar
         'titleBar.activeBackground': background,
@@ -54,11 +79,24 @@ export function generateWorkbenchColors(
         'tab.border': border,
         'editorGroupHeader.tabsBackground': panel,
 
-        // Status Bar
+        // Status Bar (completo)
         'statusBar.background': accent,
         'statusBar.foreground': '#ffffff',
+        'statusBar.border': accent,
         'statusBar.noFolderBackground': surface,
+        'statusBar.noFolderForeground': textPrimary,
+        'statusBar.noFolderBorder': border,
+        'statusBar.debuggingBackground': highlight,
+        'statusBar.debuggingForeground': '#ffffff',
+        'statusBar.debuggingBorder': highlight,
+        'statusBar.focusBorder': '#ffffff50',
         'statusBarItem.hoverBackground': highlight,
+        'statusBarItem.hoverForeground': '#ffffff',
+        'statusBarItem.activeBackground': highlight,
+        'statusBarItem.focusBorder': '#ffffff50',
+        'statusBarItem.compactHoverBackground': highlight,
+        'statusBarItem.offlineBackground': textMuted,
+        'statusBarItem.offlineForeground': '#ffffff',
 
         // Inputs
         'input.background': surface,
@@ -77,14 +115,43 @@ export function generateWorkbenchColors(
         // Lists
         'list.activeSelectionBackground': highlight + '60',
         'list.activeSelectionForeground': textPrimary,
+        'list.activeSelectionIconForeground': textPrimary,
         'list.hoverBackground': surface + '80',
         'list.focusBackground': highlight + '40',
+        'list.focusOutline': accent,
+        'list.focusAndSelectionOutline': accent,
         'list.inactiveSelectionBackground': surface,
+        'list.highlightForeground': accent,
+        'list.focusForeground': textPrimary,
 
-        // Quick Pick
+        // Quick Pick / Command Palette
         'quickInput.background': panel,
         'quickInput.foreground': textPrimary,
+        'quickInputTitle.background': surface,
         'quickInputList.focusBackground': highlight + '40',
+        'quickInputList.focusForeground': textPrimary,
+        'quickInputList.focusIconForeground': accent,
+
+        // Keybinding in Quick Pick
+        'keybindingTable.headerBackground': surface,
+        'keybindingTable.rowsBackground': panel,
+
+        // List descriptions and labels
+        'descriptionForeground': textSecondary,
+        'disabledForeground': textMuted,
+        'errorForeground': '#ef4444',
+        'foreground': textPrimary,
+        'icon.foreground': textSecondary,
+        'sash.hoverBorder': accent,
+        'selection.background': highlight + '40',
+        'textBlockQuote.background': surface,
+        'textBlockQuote.border': accent,
+        'textCodeBlock.background': surface,
+        'textLink.activeForeground': accent,
+        'textLink.foreground': accent,
+        'textPreformat.foreground': textPrimary,
+        'textPreformat.background': surface,
+        'textSeparator.foreground': border,
 
         // Dropdown
         'dropdown.background': surface,
@@ -117,7 +184,7 @@ export function generateWorkbenchColors(
         'terminal.ansiWhite': type === 'dark' ? '#d4d4d4' : '#ffffff',
 
         // Bright variants
-        'terminal.ansiBrightBlack': type === 'dark' ? '#525252' : '#737373',
+        'terminal.ansiBrightBlack': type === 'dark' ? '#525252' : '#404040',
         'terminal.ansiBrightRed': '#f87171',
         'terminal.ansiBrightGreen': '#4ade80',
         'terminal.ansiBrightYellow': '#facc15',
@@ -142,9 +209,51 @@ export function generateWorkbenchColors(
 
         // Widgets
         'editorWidget.background': panel,
+        'editorWidget.foreground': textPrimary,
         'editorWidget.border': border,
         'editorHoverWidget.background': panel,
+        'editorHoverWidget.foreground': textPrimary,
         'editorHoverWidget.border': border,
+        'editorHoverWidget.highlightForeground': accent,
+        'editorHoverWidget.statusBarBackground': surface,
+
+        // Suggest Widget (Autocomplete)
+        'editorSuggestWidget.background': panel,
+        'editorSuggestWidget.foreground': textPrimary,
+        'editorSuggestWidget.border': border,
+        'editorSuggestWidget.highlightForeground': accent,
+        'editorSuggestWidget.focusHighlightForeground': accent,
+        'editorSuggestWidget.selectedBackground': surface,
+        'editorSuggestWidget.selectedForeground': textPrimary,
+        'editorSuggestWidget.selectedIconForeground': accent,
+
+        // Parameter Hints
+        'editorParameterHint.background': panel,
+        'editorParameterHint.foreground': textPrimary,
+
+        // Lightbulb
+        'editorLightBulb.foreground': '#f59e0b',
+        'editorLightBulbAutoFix.foreground': '#22c55e',
+
+        // Inlay Hints
+        'editorInlayHint.background': surface + '80',
+        'editorInlayHint.foreground': textSecondary,
+        'editorInlayHint.typeForeground': textSecondary,
+        'editorInlayHint.parameterForeground': textSecondary,
+
+        // Ghost Text (Copilot, etc.)
+        'editorGhostText.foreground': textMuted,
+
+        // Code Lens
+        'editorCodeLens.foreground': textMuted,
+
+        // Gutter
+        'editorGutter.background': background,
+        'editorGutter.modifiedBackground': accent,
+        'editorGutter.addedBackground': '#22c55e',
+        'editorGutter.deletedBackground': '#ef4444',
+        'editorGutter.commentRangeForeground': textMuted,
+        'editorGutter.foldingControlForeground': textMuted,
 
         // Peek View
         'peekView.border': accent,
@@ -156,6 +265,39 @@ export function generateWorkbenchColors(
         'gitDecoration.modifiedResourceForeground': accent,
         'gitDecoration.untrackedResourceForeground': highlight,
         'gitDecoration.deletedResourceForeground': '#f44336',
+        'gitDecoration.addedResourceForeground': '#22c55e',
+        'gitDecoration.conflictingResourceForeground': '#f59e0b',
+        'gitDecoration.ignoredResourceForeground': textMuted,
+        'gitDecoration.renamedResourceForeground': accent,
+        'gitDecoration.stageDeletedResourceForeground': '#f44336',
+        'gitDecoration.stageModifiedResourceForeground': accent,
+        'gitDecoration.submoduleResourceForeground': highlight,
+
+        // Source Control (SCM) - Git icons and sync
+        'scmGraph.foreground': textPrimary,
+        'scmGraph.historyItemGroupBase': accent,
+        'scmGraph.historyItemGroupHoverLabelForeground': textPrimary,
+        'scmGraph.historyItemGroupLocal': accent,
+        'scmGraph.historyItemGroupRemote': highlight,
+        'scmGraph.historyItemGroupBackground': surface,
+        'scmGraph.historyItemGroupForeground': textPrimary,
+
+        // Status Bar Remote
+        'statusBarItem.remoteBackground': accent,
+        'statusBarItem.remoteForeground': '#ffffff',
+        'statusBarItem.remoteHoverBackground': highlight,
+        'statusBarItem.remoteHoverForeground': '#ffffff',
+
+        // Status Bar Prominent
+        'statusBarItem.prominentBackground': accent,
+        'statusBarItem.prominentForeground': '#ffffff',
+        'statusBarItem.prominentHoverBackground': highlight,
+
+        // Status Bar Error/Warning
+        'statusBarItem.errorBackground': '#ef4444',
+        'statusBarItem.errorForeground': '#ffffff',
+        'statusBarItem.warningBackground': '#f59e0b',
+        'statusBarItem.warningForeground': '#ffffff',
 
         // Minimap
         'minimap.background': background,
@@ -179,11 +321,12 @@ export function generateWorkbenchColors(
         'menu.foreground': textPrimary,
         'menu.selectionBackground': highlight + '40',
         'menu.selectionForeground': textPrimary,
-        'menu.selectionBorder': 'transparent',
+        'menu.selectionBorder': accent,
         'menu.separatorBackground': border,
         'menu.border': border,
         'menubar.selectionBackground': surface,
         'menubar.selectionForeground': textPrimary,
+        'menubar.selectionBorder': accent,
 
         // Command Center
         'commandCenter.background': panel,
@@ -228,6 +371,173 @@ export function generateWorkbenchColors(
         'keybindingLabel.foreground': textPrimary,
         'keybindingLabel.border': border,
         'keybindingLabel.bottomBorder': border,
+
+        // Tree/List Icons and Indent Guides
+        'tree.indentGuidesStroke': textMuted,
+        'tree.inactiveIndentGuidesStroke': textMuted + '60',
+        'tree.tableColumnsBorder': border,
+        'tree.tableOddRowsBackground': surface + '30',
+
+        // Editor Indent Guides
+        'editorIndentGuide.background': textMuted + '30',
+        'editorIndentGuide.activeBackground': textMuted + '60',
+        'editorIndentGuide.background1': textMuted + '30',
+        'editorIndentGuide.background2': textMuted + '25',
+        'editorIndentGuide.background3': textMuted + '20',
+        'editorIndentGuide.activeBackground1': textMuted + '60',
+        'editorIndentGuide.activeBackground2': textMuted + '55',
+        'editorIndentGuide.activeBackground3': textMuted + '50',
+
+        // Editor Whitespace
+        'editorWhitespace.foreground': textMuted + '40',
+
+        // Editor Rulers
+        'editorRuler.foreground': textMuted + '30',
+
+        // Minimap (more visible)
+        'minimap.foregroundOpacity': '#000000',
+        'minimapSlider.background': textMuted + '20',
+        'minimapSlider.hoverBackground': textMuted + '40',
+        'minimapSlider.activeBackground': textMuted + '60',
+        'minimapGutter.addedBackground': '#22c55e',
+        'minimapGutter.modifiedBackground': accent,
+        'minimapGutter.deletedBackground': '#ef4444',
+
+        // Panel (Terminal, Output, Problems tabs)
+        'panelSection.border': border,
+        'panelSectionHeader.background': surface,
+        'panelSectionHeader.foreground': textPrimary,
+        'panelInput.border': border,
+
+        // Symbolic icons
+        'symbolIcon.arrayForeground': textSecondary,
+        'symbolIcon.booleanForeground': accent,
+        'symbolIcon.classForeground': highlight,
+        'symbolIcon.colorForeground': accent,
+        'symbolIcon.constantForeground': accent,
+        'symbolIcon.constructorForeground': highlight,
+        'symbolIcon.enumeratorForeground': accent,
+        'symbolIcon.enumeratorMemberForeground': accent,
+        'symbolIcon.eventForeground': highlight,
+        'symbolIcon.fieldForeground': textSecondary,
+        'symbolIcon.fileForeground': textSecondary,
+        'symbolIcon.folderForeground': textSecondary,
+        'symbolIcon.functionForeground': accent,
+        'symbolIcon.interfaceForeground': highlight,
+        'symbolIcon.keyForeground': accent,
+        'symbolIcon.keywordForeground': accent,
+        'symbolIcon.methodForeground': accent,
+        'symbolIcon.moduleForeground': textSecondary,
+        'symbolIcon.namespaceForeground': textSecondary,
+        'symbolIcon.nullForeground': textMuted,
+        'symbolIcon.numberForeground': accent,
+        'symbolIcon.objectForeground': highlight,
+        'symbolIcon.operatorForeground': textSecondary,
+        'symbolIcon.packageForeground': textSecondary,
+        'symbolIcon.propertyForeground': textSecondary,
+        'symbolIcon.referenceForeground': highlight,
+        'symbolIcon.snippetForeground': textSecondary,
+        'symbolIcon.stringForeground': highlight,
+        'symbolIcon.structForeground': highlight,
+        'symbolIcon.textForeground': textPrimary,
+        'symbolIcon.typeParameterForeground': highlight,
+        'symbolIcon.unitForeground': accent,
+        'symbolIcon.variableForeground': textSecondary,
+
+        // Debug icons
+        'debugIcon.breakpointForeground': '#ef4444',
+        'debugIcon.breakpointDisabledForeground': textMuted,
+        'debugIcon.startForeground': '#22c55e',
+        'debugIcon.pauseForeground': accent,
+        'debugIcon.stopForeground': '#ef4444',
+        'debugIcon.disconnectForeground': '#ef4444',
+        'debugIcon.restartForeground': '#22c55e',
+        'debugIcon.stepOverForeground': accent,
+        'debugIcon.stepIntoForeground': accent,
+        'debugIcon.stepOutForeground': accent,
+        'debugIcon.continueForeground': accent,
+
+        // Bracket colors
+        'editorBracketMatch.background': highlight + '30',
+        'editorBracketMatch.border': accent,
+        'editorBracketHighlight.foreground1': accent,
+        'editorBracketHighlight.foreground2': highlight,
+        'editorBracketHighlight.foreground3': textSecondary,
+        'editorBracketHighlight.foreground4': accent,
+        'editorBracketHighlight.foreground5': highlight,
+        'editorBracketHighlight.foreground6': textSecondary,
+
+        // Diff editor
+        'diffEditor.insertedTextBackground': '#22c55e20',
+        'diffEditor.removedTextBackground': '#ef444420',
+        'diffEditor.insertedLineBackground': '#22c55e15',
+        'diffEditor.removedLineBackground': '#ef444415',
+
+        // Testing
+        'testing.iconFailed': '#ef4444',
+        'testing.iconErrored': '#ef4444',
+        'testing.iconPassed': '#22c55e',
+        'testing.iconQueued': textMuted,
+        'testing.iconUnset': textMuted,
+        'testing.iconSkipped': textMuted,
+
+        // Charts
+        'charts.foreground': textPrimary,
+        'charts.lines': textSecondary,
+        'charts.red': '#ef4444',
+        'charts.blue': accent,
+        'charts.yellow': '#eab308',
+        'charts.orange': '#f97316',
+        'charts.green': '#22c55e',
+        'charts.purple': highlight,
+
+        // Chat (AI Chat - Copilot, etc.)
+        'chat.requestBackground': surface,
+        'chat.requestBorder': border,
+        'chat.slashCommandBackground': accent + '30',
+        'chat.slashCommandForeground': accent,
+        'chat.avatarBackground': accent,
+        'chat.avatarForeground': '#ffffff',
+
+        // Inline Chat
+        'inlineChat.background': panel,
+        'inlineChat.border': border,
+        'inlineChat.shadow': '#00000030',
+        'inlineChat.regionHighlight': highlight + '20',
+        'inlineChatInput.background': surface,
+        'inlineChatInput.border': border,
+        'inlineChatInput.focusBorder': accent,
+        'inlineChatInput.placeholderForeground': textMuted,
+
+        // Interactive Editor (AI responses)
+        'interactive.activeCodeBorder': accent,
+        'interactive.inactiveCodeBorder': border,
+
+        // Notebook (for AI code blocks)
+        'notebook.cellBorderColor': border,
+        'notebook.cellEditorBackground': background,
+        'notebook.cellHoverBackground': surface + '50',
+        'notebook.cellInsertionIndicator': accent,
+        'notebook.cellStatusBarItemHoverBackground': surface,
+        'notebook.cellToolbarSeparator': border,
+        'notebook.focusedCellBackground': surface + '30',
+        'notebook.focusedCellBorder': accent,
+        'notebook.focusedEditorBorder': accent,
+        'notebook.inactiveFocusedCellBorder': border,
+        'notebook.outputContainerBackgroundColor': panel,
+        'notebook.outputContainerBorderColor': border,
+        'notebook.selectedCellBackground': surface + '50',
+        'notebook.selectedCellBorder': accent,
+        'notebook.symbolHighlightBackground': highlight + '30',
+
+        // Table colors (for markdown tables in chat)
+        'editorTable.background': panel,
+        'editorTable.foreground': textPrimary,
+        'editorTable.border': border,
+        'editorTable.headerBackground': surface,
+        'editorTable.headerForeground': textPrimary,
+        'editorTable.rowOddBackground': surface + '30',
+        'editorTable.rowEvenBackground': panel,
     };
 }
 
@@ -346,23 +656,27 @@ export function generateTokenColors(
     // === COLORES DE SINTAXIS DERIVADOS ===
     // Usamos rotación de color para crear variedad máxima
 
-    // Color 1: Keywords (accent directo) - Palabras reservadas
-    const keywordColor = accent;
+    // Color 1: Keywords (accent) - Palabras reservadas (más oscuro en light)
+    const keywordColor = type === 'dark' ? accent : adjustBrightness(accent, -15);
 
-    // Color 2: Strings (highlight directo) - Cadenas de texto
-    const stringColor = highlight;
+    // Color 2: Strings (highlight) - Cadenas de texto (más oscuro en light)
+    const stringColor = type === 'dark' ? highlight : adjustBrightness(highlight, -20);
 
     // Color 3: Functions - Rotado 60° desde accent para diferenciarse
-    const functionColor = adjustBrightness(rotateHue(accent, 60), type === 'dark' ? 20 : -10);
+    const functionColor = adjustBrightness(rotateHue(accent, 60), type === 'dark' ? 20 : -20);
 
-    // Color 4: Types/Classes - Mezcla de accent y highlight
-    const typeColor = mixColors(accent, highlight, 0.4);
+    // Color 4: Types/Classes - Mezcla de accent y highlight (más oscuro en light)
+    const typeColor = type === 'dark'
+        ? mixColors(accent, highlight, 0.4)
+        : adjustBrightness(mixColors(accent, highlight, 0.4), -15);
 
-    // Color 5: Numbers - Rotado desde highlight
-    const numberColor = rotateHue(highlight, -45);
+    // Color 5: Numbers - Rotado desde highlight (más oscuro en light)
+    const numberColor = type === 'dark'
+        ? rotateHue(highlight, -45)
+        : adjustBrightness(rotateHue(highlight, -45), -15);
 
-    // Color 6: Properties - Versión más suave del highlight
-    const propertyColor = adjustBrightness(highlight, type === 'dark' ? -15 : 15);
+    // Color 6: Properties - Versión más suave del highlight (más oscura en light)
+    const propertyColor = adjustBrightness(highlight, type === 'dark' ? -15 : -25);
 
     // Color 7: Variables - Texto claro/oscuro según el tema
     const variableColor = type === 'dark' ? '#d4d4d4' : '#1f1f1f';
@@ -370,11 +684,11 @@ export function generateTokenColors(
     // Color 8: Attributes - Rotado desde function
     const attributeColor = rotateHue(accent, 120);
 
-    // Color 9: Comments - Siempre gris suave
-    const commentColor = type === 'dark' ? '#6b7280' : '#9ca3af';
+    // Color 9: Comments - Gris oscuro para ambos temas (legible)
+    const commentColor = type === 'dark' ? '#6b7280' : '#6b7280';
 
-    // Color 10: Operators - Gris medio
-    const operatorColor = type === 'dark' ? '#9ca3af' : '#6b7280';
+    // Color 10: Operators - Gris oscuro
+    const operatorColor = type === 'dark' ? '#9ca3af' : '#4b5563';
 
     return [
         // ═══════════════════════════════════════════════════════════
@@ -599,7 +913,7 @@ export function generateTokenColors(
                 'meta.brace'
             ],
             settings: {
-                foreground: type === 'dark' ? '#808080' : '#666666'
+                foreground: type === 'dark' ? '#808080' : '#444444'
             }
         },
 
@@ -698,6 +1012,67 @@ export function generateTokenColors(
             ],
             settings: {
                 foreground: stringColor
+            }
+        },
+
+        // ═══════════════════════════════════════════════════════════
+        // JSX/TSX - Texto dentro de elementos
+        // ═══════════════════════════════════════════════════════════
+        {
+            scope: [
+                'meta.jsx.children',
+                'meta.jsx.children.tsx',
+                'string.unquoted.jsx',
+                'string.unquoted.tsx',
+                'text.embedded.jsx',
+                'text.embedded.tsx',
+                'source.js.jsx',
+                'source.tsx'
+            ],
+            settings: {
+                foreground: type === 'dark' ? '#e0e0e0' : '#1a1a1a'
+            }
+        },
+        // JSX Tags - <Component>, </Component>
+        {
+            scope: [
+                'entity.name.tag.jsx',
+                'entity.name.tag.tsx',
+                'support.class.component.jsx',
+                'support.class.component.tsx',
+                'punctuation.definition.tag.jsx',
+                'punctuation.definition.tag.tsx',
+                'punctuation.definition.tag.begin.jsx',
+                'punctuation.definition.tag.end.jsx',
+                'punctuation.definition.tag.begin.tsx',
+                'punctuation.definition.tag.end.tsx'
+            ],
+            settings: {
+                foreground: keywordColor
+            }
+        },
+        // JSX Attributes - className, onClick
+        {
+            scope: [
+                'entity.other.attribute-name.jsx',
+                'entity.other.attribute-name.tsx',
+                'meta.tag.attributes.jsx',
+                'meta.tag.attributes.tsx'
+            ],
+            settings: {
+                foreground: attributeColor
+            }
+        },
+        // Plain text (fallback for text content)
+        {
+            scope: [
+                'text',
+                'text.html',
+                'text.html.basic',
+                'text.html.derivative'
+            ],
+            settings: {
+                foreground: type === 'dark' ? '#e0e0e0' : '#1a1a1a'
             }
         }
     ];
